@@ -1,0 +1,13 @@
+{
+  "name": "my-nodejs-app",
+  "version": "1.0.0",
+  "description": "My Node.js Elastic Beanstalk Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "echo some build command"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

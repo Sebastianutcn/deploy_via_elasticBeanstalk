@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+  pre_build:
+    commands:
+      - echo pre_build phase started on `date`
+      - echo npm is installing...
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date` 
+      - echo tes.js is executing...
+      - node test.js
+      - echo Jest is executing...
+      - npm run test -- --coverage --reporters=default --reporters=junit 
+  post_build:
+    commands:
+      - echo Build completed on `date`
+reports:
+  jesttests:
+    files:
+      - '**/coverage/junit.xml'
+  coverage:
+      files:
+        - '**/coverage/lcov-report/*'
