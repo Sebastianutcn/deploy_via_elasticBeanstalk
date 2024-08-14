@@ -4,13 +4,12 @@ This infrastructure is designed to create a pipeline in AWS, enabling paralleliz
 **Files:**
 1. [`pipeline.tf`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/pipeline.tf) is used to create the pipeline and IAM roles for it. All the stages are put together.
 2. [`codebuild.tf`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/codebuild.tf) is used to provision the build stage and the IAM roles for it. The source is AWS CodeCommit.
-3. [`install-code-deploy-agent.sh`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/buildspec.yml) is a script used to install the agent for CodeDeploy on EC2 instance.
-4. [`install-code-deploy-agent.sh`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/buildspec_test.yml) is a script used to install the agent for CodeDeploy on EC2 instance.
-5. [`codedeploy.tf`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/elastic_beanstalk.tf) is used to provision the deploy stage and the IAM roles for it. The deployment is done by an EC2 instance.
-6. [`install-code-deploy-agent.sh`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/provider.tf) is a script used to install the agent for CodeDeploy on EC2 instance.
-7. [`install-code-deploy-agent.sh`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/variables.tf) is a script used to install the agent for CodeDeploy on EC2 instance.
-8. [`install-code-deploy-agent.sh`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/terraform.tfvars) is a script used to install the agent for CodeDeploy on EC2 instance.
-9. 
+3. [`buildspec.yml`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/buildspec.yml) is a script used to install the agent for CodeDeploy on EC2 instance.
+4. [`buildspec.yml`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/buildspec_test.yml) is a script used to install the agent for CodeDeploy on EC2 instance.
+5. [`elastic_beanstalk.tf`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/elastic_beanstalk.tf) is used to provision the deploy stage and the IAM roles for it. The deployment is done by an EC2 instance.
+6. [`provider.tf`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/provider.tf) is a script used to install the agent for CodeDeploy on EC2 instance.
+7. [`variables.tf`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/variables.tf) is a script used to install the agent for CodeDeploy on EC2 instance.
+8. [`terraform.tfvars`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/terraform.tfvars) is a script used to install the agent for CodeDeploy on EC2 instance.
 
 ## Installation
 - Terraform command to initialize the project
