@@ -11,6 +11,11 @@ This infrastructure is designed to create a pipeline in AWS, enabling paralleliz
 7. [`variables.tf`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/variables.tf) declares variables used across the Terraform configuration files.
 8. [`terraform.tfvars`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/terraform.tfvars) contains the actual values for the variables defined in [`variables.tf`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/blob/main/variables.tf).
 
+9. The [`source folder`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/tree/main/source) is used to store:
+        - The source code: [`/source/app.js`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/tree/main/source/app.js)
+        - The project dependencies: [`/source/package.json`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/tree/main/source/package.json)
+        - The test file: [`/source/test.js`](https://github.com/Sebastianutcn/deploy_via_elasticBeanstalk/tree/main/source/test.js)
+
 ## Installation
 - Terraform command to initialize the project
 ```
