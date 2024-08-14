@@ -1,1 +1,22 @@
-# deploy_via_elasticBeanstalk
+# AWS CodePipeline created using Terraform
+This infrastructure is designed to create a pipeline in AWS, enabling parallelized builds for efficiency. One build is dedicated to compiling the source code and storing artifacts, while the other focuses on testing the source code. The deployment process is managed seamlessly by AWS Elastic Beanstalk.
+
+**Files:**
+1. [`main.tf`](https://github.com/Sebastianutcn/pipeline-terraform/blob/main/main.tf) is used to create the pipeline and IAM roles for it. All the stages are put together.
+2. [`codebuild.tf`](https://github.com/Sebastianutcn/pipeline-terraform/blob/main/codebuild.tf) is used to provision the build stage and the IAM roles for it. The source is AWS CodeCommit.
+3. [`codedeploy.tf`](https://github.com/Sebastianutcn/pipeline-terraform/blob/main/codedeploy.tf) is used to provision the deploy stage and the IAM roles for it. The deployment is done by an EC2 instance.
+4. [`install-code-deploy-agent.sh`](https://github.com/Sebastianutcn/pipeline-terraform/blob/main/install-code-deploy-agent.sh) is a script used to install the agent for CodeDeploy on EC2 instance.
+
+## Installation
+- Terraform command to initialize the project
+```
+terraform init
+```
+* Terraform command to plan the changes and to check again the resources that were added, changed or deleted
+```
+terraform plan -out plan.out
+```
+- Terraform command to apply the changes
+```
+terraform apply plan.out --auto-approve
+```
