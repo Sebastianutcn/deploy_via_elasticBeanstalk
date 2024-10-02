@@ -1,4 +1,4 @@
-# AWS CodePipeline created using Terraform
+# Deployment via ElasticBeanstalk created using Terraform
 This infrastructure is designed to create a pipeline in AWS, enabling parallelized builds for efficiency. One build is dedicated to compiling the source code and storing artifacts, while the other focuses on testing the source code. The deployment process is managed seamlessly by AWS Elastic Beanstalk.
 
 **Files:**
